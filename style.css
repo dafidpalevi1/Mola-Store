@@ -462,7 +462,7 @@ padding: 10px 0;
 
 #newsletter .form{
     display: flex;
-    width: 40%;
+    width: 100%;
 }
 
 #newsletter input{
