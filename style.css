@@ -700,7 +700,6 @@ footer .copyright {
         display: flex;
         flex-direction: column;
     }
-
     }
     #prodetails .single-pro-details {
         width: 100%;
@@ -766,8 +765,7 @@ footer .copyright {
 }
 
 #prodetails .single-pro-details{
-    width: 50%;
-    padding-top: 30px;
+    width: 100%;
 }
 
 #prodetails .single-pro-details h4{
