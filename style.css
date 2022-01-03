@@ -692,7 +692,8 @@ footer .copyright {
         width: 100%;
     }
     footer .copyright {
-       text-align: start; 
+       text-align: center; 
+       width: 100%;
     }
 }
 
