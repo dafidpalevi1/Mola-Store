@@ -134,7 +134,7 @@ transition: 0.3s ease;
 /* Home Page */
 #hero{
     background-image: url(img/hero4.png);
-    height: 85vh;
+    height: 90vh;
     width: 100%;
     background-size: cover;
     background-position:  top 25% right 0;
