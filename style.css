@@ -157,7 +157,7 @@ transition: 0.3s ease;
 }
 
 #hero h2{
-    color: #f10606;
+    color: #3906f1;
     width: 100%;
     margin-right: auto;
     margin-left: auto;
@@ -166,7 +166,7 @@ transition: 0.3s ease;
 #hero button{
     display: inline-block;
     background-color: var(--first-color);
-    color: rgb(233, 13, 13);
+    color: rgb(13, 17, 233);
     padding: 1rem 1.5rem;
     border-radius: .5rem;
     font-weight: var(--font-semi-bold);
