@@ -697,6 +697,7 @@ footer .copyright {
     }
     /* Single Product */
     #prodetails {
+        width: 100%;
         display: flex;
         flex-direction: column;
     }
