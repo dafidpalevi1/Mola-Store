@@ -4,12 +4,12 @@ const nav = document.getElementById('navbar');
 
 if (bar) {
     bar.addEventListener('click', () => {
-       nav.classlist.add('active');
+       nav.classList.add('active');
     })
 }
 
 if (close) {
     close.addEventListener('click', () => {
-       nav.classlist.remove('active');
+       nav.classList.remove('active');
     })
 }

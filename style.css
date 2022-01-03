@@ -697,7 +697,6 @@ footer .copyright {
     }
     /* Single Product */
     #prodetails {
-        width: 100%;
         display: flex;
         flex-direction: column;
     }
@@ -750,7 +749,6 @@ footer .copyright {
 
 #prodetails{
     display: flex;
-    flex-direction: row;
     margin-top: 20px;
 }
 
