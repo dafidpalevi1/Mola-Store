@@ -1242,6 +1242,13 @@ form.sign-in-form {
 		transform: translate(-50%, -100%);
 		transition: 1s 0.8s ease-in-out;
 	}
+
+    .signin-signup .sign-in-form .login{
+        margin-bottom: 35px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 280px;
+    }
 	
 	.signin-signup,
 	.container.sign-up-mode .signin-signup {
@@ -1252,6 +1259,10 @@ form.sign-in-form {
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 2fr 1fr;
 	}
+
+    .panels-container .content .h5{
+        margin-bottom: 20px;
+    }
 	
 	.panel {
 		flex-direction: row;
@@ -1360,4 +1371,5 @@ form.sign-in-form {
 		bottom: 28%;
 		left: 50%;
 	}
+    
 }
