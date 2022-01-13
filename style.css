@@ -596,6 +596,10 @@ footer .copyright {
     height: auto;
 }
 
+#about-head h2{
+    text-align: center;
+}
+
 #about-head div{
     padding-left: 40px;
 }
