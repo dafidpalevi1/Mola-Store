@@ -1849,6 +1849,7 @@ form.sign-in-form {
   }
  /* sale */
  .sale {
+   overflow: auto;
     background-color: #ffffff;
     /* padding: 13px; */
     flex-direction: column;
