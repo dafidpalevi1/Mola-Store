@@ -256,7 +256,6 @@ body {
 
 /* KATEGORY */
 .kategory {
-  overflow: auto;
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
