@@ -256,6 +256,7 @@ body {
 
 /* KATEGORY */
 .kategory {
+  overflow: auto;
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
@@ -1809,7 +1810,7 @@ form.sign-in-form {
 
   /* KATEGORY */
  .kategory {
-   overflow: auto;
+    overflow: auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
