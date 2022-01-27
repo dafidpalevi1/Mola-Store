@@ -2157,10 +2157,13 @@ form.sign-in-form {
 
 /* Start Media Query 477*/
 @media (max-width: 477px) {
-   .section-p1 {
-   padding: 0;
+  .section-p1 {
+    padding: 0;
   }
-
+  
+  .section-m1 {
+    margin: 0;
+  }
   #header {
    padding: 2px 2px;
   }
@@ -2481,7 +2484,7 @@ form.sign-in-form {
 
   .jenis-sale {
     overflow: auto;
-    background-color: #17a2b8;
+    background-color: #ffffff;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -2490,7 +2493,7 @@ form.sign-in-form {
 
   .jenis-sale p {
     font-size: 10px;
-    color: #fff;
+    color: rgb(0, 0, 0);
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
   }
