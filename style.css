@@ -41,7 +41,7 @@ p {
 /*section*/
 
 .section-p1 {
-  padding: 0px 10px;
+  padding: 0px 40px;
 }
 
 .section-m1 {
@@ -1441,7 +1441,7 @@ form.sign-in-form {
   width: 100px;
 }
 
-/* jenis sale Desktop */
+/* Menu Dibawah Background Desktop */
 
 .jenis-sale {
   overflow: auto;
@@ -2480,7 +2480,7 @@ form.sign-in-form {
   }
 
 
-  /* jenis Menu sale Atas HP */
+  /* Menu Dibawah Background Atas HP */
 
   .jenis-sale {
     overflow: auto;
