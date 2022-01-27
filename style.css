@@ -2484,7 +2484,6 @@ form.sign-in-form {
 
   .jenis-sale {
     overflow: auto;
-    overflow: none;
     background-color: #ffffff;
     width: 100%;
     display: flex;
