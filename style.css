@@ -1814,6 +1814,7 @@ form.sign-in-form {
     background-color: #fff;
     width: 100%;
     height: 100%;
+    padding-bottom: 40px;
   }
   
   .kategory h5 {
@@ -1891,6 +1892,7 @@ form.sign-in-form {
  /* pencarian populer */
   #pencarian-populer{
     overflow: auto;
+    width: 100%;
   }
 
  .card-pencarian {
