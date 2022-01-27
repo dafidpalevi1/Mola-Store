@@ -1444,6 +1444,7 @@ form.sign-in-form {
 /* jenis sale Desktop */
 
 .jenis-sale {
+  overflow: auto;
   padding: 10px;
   background-color: #ffffff;
 }
@@ -2482,6 +2483,7 @@ form.sign-in-form {
   /* jenis Menu sale Atas HP */
 
   .jenis-sale {
+    overflow: auto;
     background-color: #17a2b8;
     width: 100%;
     display: flex;
