@@ -91,6 +91,7 @@ body {
 }
 
 .container-2 form input{
+    display: flex;
     border: none;
     outline: none;
     box-shadow: none;
@@ -98,6 +99,7 @@ body {
     font-size: 16px;
     font-weight: 600;
     margin-left: 10px;
+    padding: 0;
 }
 
 /* Header Start */
@@ -106,7 +108,7 @@ body {
  display: flex;
  align-items: center;
  justify-content: space-between;
- padding: 20px 20px;
+ padding: 10px 20px;
  background-color: #17a2b8;
  box-shadow: 0 5px 15px rgb(0, 0, 0, 0.06);
  z-index: 999;
@@ -160,7 +162,128 @@ body {
   display: none;
 }
 
+.account-form {
+  position: fixed;
+  top: 0;
+  right: -105%;
+  width: 400px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  z-index: 1200;
+  padding: 10px;
+  text-align: center;
+}
+
+.account-form.active {
+  right: 0;
+  -webkit-box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+}
+
+.account-form #close-form {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  font-size: 16px;
+  cursor: pointer;
+  color: #444;
+}
+
+.account-form #close-form:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+          font-size: 16px;
+}
+
+.account-form form {
+  border: 0.1rem solid #0eb582;
+  padding: 10px;
+  display: none;
+  width: 380px;
+}
+
+.account-form form.active {
+  display: block;
+}
+
+.account-form form h3 {
+  text-align: center;
+  font-size: 22px;
+  text-transform: capitalize;
+  color: #444;
+  padding-bottom: .5rem;
+  text-transform: uppercase;
+}
+
+.account-form form .box {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  border: 0.1rem solid #0eb582;
+  font-size: 16px;
+  margin: .7rem 0;
+}
+
+.account-form form .flex {
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .16px;
+}
+
+.account-form form .flex label {
+  font-size: 16px;
+  color: #777;
+  cursor: pointer;
+  padding: 10px 10px 10px 10px;
+  padding-bottom: 0;
+}
+
+.account-form form .flex a {
+  padding: 10px 10px 10px 10px;
+  font-size: 16px;
+  color: #777;
+  margin-left: auto;
+}
+
+.account-form form .flex a:hover {
+  text-decoration: underline;
+  color: #0eb582;
+}
+
+.account-form form .btn {
+  width: 100%;
+  padding: 15px;
+}
+
+.account-form .buttons .btn {
+  margin: 10px;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+.account-form .buttons .btn.active {
+  background: #0eb582;
+  color: #fff;
+  padding: 15px;
+}
+
 /* Header End */
+
 
 /* Home Page */
 #hero{
@@ -833,14 +956,17 @@ footer .copyright {
 /* Single Product */
 
 #prodetails{
+  flex-direction: column;
   display: flex;
   margin-top: 20px;
+  padding: 10px;
 }
 
 #prodetails .single-pro-image{
   width: 100%;
   margin-right: 50px;
 }
+
 
 .small-img-group{
   display: flex;
@@ -1472,6 +1598,7 @@ form.sign-in-form {
 #prodetails {
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 
 #prodetails .single-pro-image {
@@ -1493,18 +1620,18 @@ form.sign-in-form {
    border-bottom: 3px solid #17a2b8; !important;
 }
 
-#container-2 {
+.container-2{
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 20px;
-  flex-wrap: wrap;
 }
 
 .rekomendasi-span {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   color: #f10606;
-  padding-left: 20px;
 }
 
 .rekomendasi p {
@@ -1513,29 +1640,20 @@ form.sign-in-form {
 
 #rekomendasi .btn{
   align-items: center;
-  margin-right: 40px;
 }
 
-#pro .gambar{
+#pro .gambar .rekomendasi img{
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  padding-top: 20px;
-  flex-wrap: wrap;
 }
 
 #rekomendasi .gambar img{
-  width: 300px;
-  height: 200px;
-  margin-left: 20px;
-  left: 100px;
+  width: 180px;
+  height: 180px;
 }
 
-.container-p2 .pro-container {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 20px;
-  flex-wrap: wrap;
-}
+
 
 
 .nav-tabs {

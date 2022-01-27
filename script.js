@@ -15,14 +15,29 @@ if (close) {
 }
 
 /*login */
-const sign_in_btn = document.querySelector("#sign-in-btn");
-const sign_up_btn = document.querySelector("#sign-up-btn");
-const container = document.querySelector(".container");
+let registerBtn = document.querySelector('.account-form .register-btn');
+let loginBtn = document.querySelector('.account-form .login-btn');
 
-sign_up_btn.addEventListener("click", () => {
-	container.classList.add("sign-up-mode");
-});
+registerBtn.onclick = () =>{
+  registerBtn.classList.add('active');
+  loginBtn.classList.remove('active');
+  document.querySelector('.account-form .login-form').classList.remove('active');
+  document.querySelector('.account-form .register-form').classList.add('active');
+};
 
-sign_in_btn.addEventListener("click", () => {
-	container.classList.remove("sign-up-mode");
-});
+loginBtn.onclick = () =>{
+  registerBtn.classList.remove('active');
+  loginBtn.classList.add('active');
+  document.querySelector('.account-form .login-form').classList.add('active');
+  document.querySelector('.account-form .register-form').classList.remove('active');
+};
+
+let accountForm = document.querySelector('.account-form')
+
+document.querySelector('#account-btn').onclick = () =>{
+  accountForm.classList.add('active');
+}
+
+document.querySelector('#close-form').onclick = () =>{
+  accountForm.classList.remove('active');
+};
