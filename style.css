@@ -1421,6 +1421,7 @@ form.sign-in-form {
 
 /* pencarian populer desktop*/
 .card-pencarian {
+  overflow: auto;
   padding-left: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -1892,6 +1893,7 @@ form.sign-in-form {
 
  /* pencarian populer */
  .card-pencarian {
+   overflow: auto;
     display: flex;
     width: 260px;
     height: 200px;
