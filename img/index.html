@@ -1,0 +1,2987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molla Store</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/fav.png">
+</head>
+<body>
+  
+    <section id="header">
+    <a href="index.html"><img src="img/mola.png" class="logo" alt=""></a>
+    <div>
+        <ul id="navbar">
+            <section class="container-2">
+            <form>
+                <i class="fas fa-search"></i>
+                <input type="text" name="" id="search-item" placeholder="Search product" onkeyup="search()">
+            </form>
+        </section>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="payment.html">Payment</a></li>
+            <li id="lg-bag"><a href="cart.html"><i class="fad fa-shopping-cart"></i></a></li>
+            <div id="account-btn" class="fas fa-user"></div>
+            <li id="lg-comment"><a href="#"><i class="fas fa-comment-dots"></i></a></li>
+            <a href="#" id="close"><i class="far fa-times"></i></a>
+        </ul>
+    </div>
+    <div id="mobile">
+        <a href="cart.html"><i class="fad fa-shopping-cart"></i></a>
+        <div id="account-btn" class="fas fa-user"></div>
+        <a href="#"><i class="fas fa-comment-dots"></i></a>
+        <i id="bar" class="fas fa-bars"></i>
+    </div>
+    </section>
+
+      <!-- Bottom Navbar -->
+  <nav class="navbar navbar-dark bg-info navbar-expand d-md-none d-lg-none d-xl-none fixed-bottom">
+    <ul class="navbar-nav nav-justified w-100">
+      <li class="nav-item">
+        <a href="index.html" class="nav-link">
+            <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-house" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+              </svg>
+              <span class="small d-block">Beranda</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-chat-left-fill" viewBox="0 0 16 16">
+                <path d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+              </svg>
+              <span class="small d-block">Feed</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+              </svg>
+              <span class="small d-block">Molla</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+              </svg>
+              <span class="small d-block">Notifikasi</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="login.html" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+              </svg>
+              <span class="small d-block">Saya</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- account form section starts  -->
+
+<div class="account-form">
+
+  <div id="close-form" class="fas fa-times"></div>
+
+  <div class="buttons">
+     <span class="btn active login-btn">login</span>
+     <span class="btn register-btn">register</span>
+  </div>
+
+  <form class="login-form active" action="">
+     <h3>login now</h3>
+     <input type="email" placeholder="enter your email" class="box">
+     <input type="password" placeholder="enter your password" class="box">
+     <div class="flex">
+        <input type="checkbox" name="" id="remember-me">
+        <label for="remember-me">remember me</label>
+        <a href="#">forgot password?</a>
+     </div>
+     <input type="submit" value="login now" class="btn">
+  </form>
+
+  <form class="register-form" action="">
+     <h3>register now</h3>
+     <input type="email" placeholder="enter your email" class="box">
+     <input type="password" placeholder="enter your password" class="box">
+     <input type="password" placeholder="confirm your password" class="box">
+     <input type="submit" value="register now" class="btn">
+  </form>
+
+</div>
+
+<!-- account form section ends -->
+
+    <section id="hero">
+    <h4>Hello,Sobat!!</h4>
+    <h2>MOLLA STORE</h2>
+    <h1>Klik,Temukan,</br>Tentukan</h1>
+    <p>Belanja Lebih Murah Hanya Ada Disini</p>
+    <button>Belanja Sekarang!!</button>
+</section>
+
+<!-- jenis sale -->
+<section id="jenis-sale" class="section-p1">
+<div class="row mx-0 jenis-sale">
+    <div class="d-flex justify-content-between w-100">
+      <div class="d-flex flex-column align-items-center">
+        <div class="wrap-img">
+          <a href="#"><img src="https://cf.shopee.co.id/file/ae2620ecee6471a9591ba310feb831be_xhdpi" alt="" /></a>
+        </div>
+        <p class="mb-0 mt-2">Molla Store</p>
+      </div>
+      <div class="d-flex flex-column align-items-center">
+        <div class="wrap-img">
+          <a href="#"><img src="https://cf.shopee.co.id/file/fe02a504f64b146f90af16947ae65d08_xhdpi" alt="" /></a>
+        </div>
+        <p class="mb-0 mt-2">Produk 100% Original</p>
+      </div>
+      <div class="d-flex flex-column align-items-center">
+        <div class="wrap-img">
+          <a href="#"><img src="https://cf.shopee.co.id/file/5164f9b1e9319def7e609101eb3c9349_xhdpi" alt="" /></a>
+        </div>
+        <p class="mb-0 mt-2">Pulsa, Tagihan &amp; Hiburan</p>
+      </div>
+      <div class="d-flex flex-column align-items-center">
+        <div class="wrap-img">
+          <a href="#"><img src="https://cf.shopee.co.id/file/4447bdcba3c51c693feef4f22ba05c49_xhdpi" alt="" /></a>
+        </div>
+        <p class="mb-0 mt-2">Fashion</p>
+      </div>
+      <div class="d-flex flex-column align-items-center">
+        <div class="wrap-img">
+          <a href="#"><img src="https://cf.shopee.co.id/file/d38815fe0e030e787cf2e0508d3e8c80_xhdpi" alt="" /></a>
+        </div>
+        <p class="mb-0 mt-2">Molla Super Market</p>
+      </div>
+      <div class="d-flex flex-column align-items-center">
+        <div class="wrap-img">
+          <a href="#"><img src="https://cf.shopee.co.id/file/12c9571aaf93404afaaf9b46ef2bb345_xhdpi" alt="" /></a>
+        </div>
+        <p class="mb-0 mt-2">Bayar di Tempat</p>
+      </div>
+      <div class="d-flex flex-column align-items-center">
+        <div class="wrap-img">
+          <a href="#"><img src="https://cf.shopee.co.id/file/4e08bce7d8d6ab488b82ab59d03cb793_xhdpi" alt="" /></a>
+        </div>
+        <p class="mb-0 mt-2">Murah Lebay</p>
+      </div>
+      <div class="d-flex flex-column align-items-center">
+        <div class="wrap-img">
+          <a href="#"><img src="https://cf.shopee.co.id/file/4497ac7ff3ee9711a8d512d0f8297b49_xhdpi" alt="" /></a>
+        </div>
+        <p class="mb-0 mt-2">Gratis Ongkir &amp; Voucher</p>
+      </div>
+      <div class="d-flex flex-column align-items-center">
+        <div class="wrap-img">
+          <a href="#"><img src="https://cf.shopee.co.id/file/e14301aa0ad57dcb82e08564d799f83a_xhdpi" alt="" /></a>
+        </div>
+        <p class="mb-0 mt-2">Promo Bank</p>
+      </div>
+      <div class="d-flex flex-column align-items-center">
+        <div class="wrap-img">
+          <a href="#"><img src="https://cf.shopee.co.id/file/60434906cac999e73fdcc78c8f484467_xhdpi" alt="" /></a>
+        </div>
+        <p class="mb-0 mt-2">Semua Promo</p>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+</section>
+
+<!-- flash sale -->
+<section id="flash-sale" class="section-p1">
+  <div class="row mx-0 sale mt-4">
+      <div class="d-flex px-4 pt-4">
+        <h5 class="mr-5">FLASH SALE</h5>
+        <span>00</span>
+        <span class="ml-3">00</span>
+        <span class="ml-3">00</span>
+      </div>
+      <div class="row mx-0 mt-4 row-card">
+        <div class="col-2 h-100 position-relative">
+          <div
+            class="d-flex align-items-center justify-content-center h-100"
+          >
+            <div class="diskon">
+              <span class="font-weight-bold" style="color: #f53d2d"
+                >35%</span
+              >
+              <span class="text-white font-weight-bold">OFF</span>
+            </div>
+            <div class="wrap-img-sale">
+              <a href="#"><img class="w-100 h-100" src="img/products/flash1.png" alt="" /></a>
+            </div>
+            <div class="total w-100">
+              <div class="text">
+                <span>Rp</span>
+                <span>175.000</span>
+              </div>
+              <div class="progresss">
+                <span> 1 TERJUAL</span>
+                <div class="progress-on"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 h-100 position-relative">
+          <div
+            class="d-flex align-items-center justify-content-center h-100"
+          >
+            <div class="diskon">
+              <span class="font-weight-bold" style="color: #f53d2d"
+                >35%</span
+              >
+              <span class="text-white font-weight-bold">OFF</span>
+            </div>
+            <div class="wrap-img-sale">
+              <a href="#"><img class="w-100 h-100" src="img/products/flash2.png" alt="" /></a>
+            </div>
+            <div class="total w-100">
+              <div class="text">
+                <span>Rp</span>
+                <span>175.000</span>
+              </div>
+              <div class="progresss">
+                <span> 1 TERJUAL</span>
+                <div class="progress-on"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 h-100 position-relative">
+          <div
+            class="d-flex align-items-center justify-content-center h-100"
+          >
+            <div class="diskon">
+              <span class="font-weight-bold" style="color: #f53d2d"
+                >35%</span
+              >
+              <span class="text-white font-weight-bold">OFF</span>
+            </div>
+            <div class="wrap-img-sale">
+              <a href="#"><img class="w-100 h-100" src="img/products/flash3.png" alt="" /></a>
+            </div>
+            <div class="total w-100">
+              <div class="text">
+                <span>Rp</span>
+                <span>175.000</span>
+              </div>
+              <div class="progresss">
+                <span> 1 TERJUAL</span>
+                <div class="progress-on"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 h-100 position-relative">
+          <div
+            class="d-flex align-items-center justify-content-center h-100"
+          >
+            <div class="diskon">
+              <span class="font-weight-bold" style="color: #f53d2d"
+                >35%</span
+              >
+              <span class="text-white font-weight-bold">OFF</span>
+            </div>
+            <div class="wrap-img-sale">
+              <a href="#"><img class="w-100 h-100" src="img/products/flash4.png" alt="" /></a>
+            </div>
+            <div class="total w-100">
+              <div class="text">
+                <span>Rp</span>
+                <span>175.000</span>
+              </div>
+              <div class="progresss">
+                <span> 1 TERJUAL</span>
+                <div class="progress-on"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 h-100 position-relative">
+          <div
+            class="d-flex align-items-center justify-content-center h-100"
+          >
+            <div class="diskon">
+              <span class="font-weight-bold" style="color: #f53d2d"
+                >35%</span
+              >
+              <span class="text-white font-weight-bold">OFF</span>
+            </div>
+            <div class="wrap-img-sale">
+              <a href="#"><img class="w-100 h-100" src="img/products/flash5.png" alt="" /></a>
+            </div>
+            <div class="total w-100">
+              <div class="text">
+                <span>Rp</span>
+                <span>175.000</span>
+              </div>
+              <div class="progresss">
+                <span> 1 TERJUAL</span>
+                <div class="progress-on"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 h-100 position-relative">
+          <div
+            class="d-flex align-items-center justify-content-center h-100"
+          >
+            <div class="diskon">
+              <span class="font-weight-bold" style="color: #f53d2d"
+                >35%</span
+              >
+              <span class="text-white font-weight-bold">OFF</span>
+            </div>
+            <div class="wrap-img-sale">
+              <a href="#"><img class="w-100 h-100" src="img/products/flash6.png" alt="" /></a>
+            </div>
+            <div class="total w-100">
+              <div class="text">
+                <span>Rp</span>
+                <span>175.000</span>
+              </div>
+              <div class="progresss">
+                <span> 1 TERJUAL</span>
+                <div class="progress-on"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Karegory -->
+  <section id="kategory" class="section-p1">
+  <div class="row mx-0 mt-4 kategory">
+    <h5 class="p-4">KATEGORY</h5>
+    <div class="d-flex">
+      <div class="d-flex flex-column align-items-center card-kategory">
+        <div class="wrap-img">
+          <a href="#"><img class="w-100 h-100" src="https://cf.shopee.co.id/file/02577b74fe168f6dabd57eab9c2f8f21_tn" alt="" /></a>
+        </div>
+        <p class="mb-0 text-center mt-2">
+          Elektronik</p>
+      </div>
+      <div class="d-flex flex-column align-items-center card-kategory">
+        <div class="wrap-img">
+          <a href="#"><img class="w-100 h-100" src="https://cf.shopee.co.id/file/1c2d1181b1f5306ce2c41803617e7446_tn" alt="" /></a>
+        </div>
+        <p class="mb-0 text-center mt-2">Komputer & Aksesoris</p>
+      </div>
+      <div class="d-flex flex-column align-items-center card-kategory">
+        <div class="wrap-img">
+          <a href="#"><img class="w-100 h-100" src="https://cf.shopee.co.id/file/5bbc23650006cd766b8838f55d53aac7_tn" alt="" /></a>
+        </div>
+        <p class="mb-0 text-center mt-2">Handphone & Aksesoris</p>
+      </div>
+      <div class="d-flex flex-column align-items-center card-kategory">
+        <div class="wrap-img">
+          <a href="#"><img class="w-100 h-100" src="https://cf.shopee.co.id/file/04dba508f1ad19629518defb94999ef9_tn" alt="" /></a>
+        </div>
+        <p class="mb-0 text-center mt-2">Pakaian Pria</p>
+        <p class="mb-0 text-center"></p>
+      </div>
+      <div class="d-flex flex-column align-items-center card-kategory">
+        <div class="wrap-img">
+          <a href="#"><img class="w-100 h-100" src="https://cf.shopee.co.id/file/8465b33b83d571b2dbac57481622002e_tn" alt="" /></a>
+        </div>
+        <p class="mb-0 text-center mt-2">Sepatu Pria</p>
+        <p class="mb-0 text-center"></p>
+      </div>
+      <div class="d-flex flex-column align-items-center card-kategory">
+        <div class="wrap-img">
+          <a href="#"><img class="w-100 h-100" src="https://cf.shopee.co.id/file/7dea4bb643bfb14ac71e46cd4e5740ad_tn" alt="" /></a>
+        </div>
+        <p class="mb-0 text-center mt-2">Tas Pria</p>
+        <p class="mb-0 text-center"></p>
+      </div>
+      <div class="d-flex flex-column align-items-center card-kategory">
+        <div class="wrap-img">
+          <a href="#"><img class="w-100 h-100" src="https://cf.shopee.co.id/file/1f18bdfe73df39c66e7326b0a3e08e87_tn" alt="" /></a>
+        </div>
+        <p class="mb-0 text-center mt-2">Aksesoris Fashion</p>
+      </div>
+      <div class="d-flex flex-column align-items-center card-kategory">
+        <div class="wrap-img">
+          <a href="#"><img class="w-100 h-100" src="https://cf.shopee.co.id/file/dc4d827babe0d4215dfcf287dd277507_tn" alt="" /></a>
+        </div>
+        <p class="mb-0 text-center mt-2">Jam Tangan</p>
+        <p class="mb-0 text-center"></p>
+      </div>
+      <div class="d-flex flex-column align-items-center card-kategory">
+        <div class="wrap-img">
+          <a href="#"><img class="w-100 h-100" src="https://cf.shopee.co.id/file/f9490654e54dc56e308cda4f6d86e840_tn" alt="" /></a>
+        </div>
+        <p class="mb-0 text-center mt-2">Kesehatan</p>
+        <p class="mb-0 text-center"></p>
+      </div>
+      <div class="d-flex flex-column align-items-center card-kategory">
+        <div class="wrap-img">
+          <a href="#"><img class="w-100 h-100" src="https://cf.shopee.co.id/file/61a7b80e42a3d272d170954c76ab84a7_tn" alt="" /></a>
+        </div>
+        <p class="mb-0 text-center mt-2">Hobi & Koleksi</p>
+      </div>
+    </div>
+    <div class="d-flex">
+      <div class="d-flex flex-column align-items-center card-kategory">
+        <div class="wrap-img">
+          <a href="#"><img class="w-100 h-100" src="https://cf.shopee.co.id/file/b912e9726dc8cb5e9447a7738a68479c_tn" alt="" /></a>
+        </div>
+        <p class="mb-0 text-center mt-2">Makanan & Minuman</p>
+      </div>
+      <div class="d-flex flex-column align-items-center card-kategory">
+        <div class="wrap-img">
+          <a href="#"><img class="w-100 h-100" src="https://cf.shopee.co.id/file/fd68904a717156196d809cab264a4f4e_tn" alt="" /></a>
+        </div>
+        <p class="mb-0 text-center mt-2">Perawatan & Kecantikan</p>
+      </div>
+      <div class="d-flex flex-column align-items-center card-kategory">
+        <div class="wrap-img">
+          <a href="#"><img class="w-100 h-100" src="https://cf.shopee.co.id/file/962e5544f481d1032bd1dfd3137c4355_tn" alt="" /></a>
+        </div>
+        <p class="mb-0 text-center mt-2">Perlengkapan Rumah</p>
+      </div>
+      <div class="d-flex flex-column align-items-center card-kategory">
+        <div class="wrap-img">
+          <a href="#"><img class="w-100 h-100" src="https://cf.shopee.co.id/file/23918f8dacba18c938fe42d13aa31b57_tn" alt="" /></a>
+        </div>
+        <p class="mb-0 text-center mt-2">Pakian Wanita</p>
+        <p class="mb-0 text-center"></p>
+      </div>
+      <div class="d-flex flex-column align-items-center card-kategory">
+        <div class="wrap-img">
+          <a href="#"><img class="w-100 h-100" src="https://cf.shopee.co.id/file/b98756cdb31eabe3d7664599e24ccc29_tn" alt="" /></a>
+        </div>
+        <p class="mb-0 text-center mt-2">Fashion Muslim</p>
+        <p class="mb-0 text-center"></p>
+      </div>
+      <div class="d-flex flex-column align-items-center card-kategory">
+        <div class="wrap-img">
+          <a href="#"><img class="w-100 h-100" src="https://cf.shopee.co.id/file/9251edd6d6dd98855ff5a99497835d9c_tn" alt="" /></a>
+        </div>
+        <p class="mb-0 text-center mt-2">Fashion Bayi & Anak</p>
+      </div>
+      <div class="d-flex flex-column align-items-center card-kategory">
+        <div class="wrap-img">
+          <a href="#"><img class="w-100 h-100" src="https://cf.shopee.co.id/file/c808f51e19db257047e506cecab648f3_tn" alt="" /></a>
+        </div>
+        <p class="mb-0 text-center mt-2">Ibu & Bayi</p>
+        <p class="mb-0 text-center"></p>
+      </div>
+      <div class="d-flex flex-column align-items-center card-kategory">
+        <div class="wrap-img">
+          <a href="#"><img class="w-100 h-100" src="https://cf.shopee.co.id/file/3e5c1658eb48c7bad36b8a431d8af827_tn" alt="" /></a>
+        </div>
+        <p class="mb-0 text-center mt-2">Sepatu Wanita</p>
+        <p class="mb-0 text-center"></p>
+      </div>
+      <div class="d-flex flex-column align-items-center card-kategory">
+        <div class="wrap-img">
+          <a href="#"><img class="w-100 h-100" src="https://cf.shopee.co.id/file/bf4c3ac88a7d12b29a5d617ee0c63d9f_tn" alt="" /></a>
+        </div>
+        <p class="mb-0 text-center mt-2">Tas Wanita</p>
+        <p class="mb-0 text-center"></p>
+      </div>
+      <div class="d-flex flex-column align-items-center card-kategory">
+        <div class="wrap-img">
+          <a href="#"><img class="w-100 h-100" src="https://cf.shopee.co.id/file/27838b968afb76ca59dd8e8f57ece91f_tn" alt="" /></a>
+        </div>
+        <p class="mb-0 text-center mt-2">Otomotif</p>
+        <p class="mb-0 text-center"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- pencarian populer -->
+<section id="pencarian-populer" class="section-p1">
+  <div
+  class="row flex-column mx-0 pt-3 mt-4"
+  style="background-color: #ffffff"
+  >
+  <div
+    class="px-4 d-flex justify-content-between align-items-center w-100"
+  >
+    <h4 class="" style="color: #17a2b8;">PENCARIAN POPULER</h4>
+    <span style="color: #17a2b8; font-weight: 100">Ubah</span>
+  </div>
+  
+  <div class="d-flex w-100 pt-3">
+    <div class="card-pencarian">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column">
+          <span class="font-weight-bold"> Sepatu </span>
+          <span class="font-weight-bold" style="color: #17a2b8;">
+            136RB+Produk
+          </span>
+        </div>
+        <img class="img" src="img/products/flash1.png" alt="" />
+      </div>
+    </div>
+    <div class="card-pencarian">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column">
+          <span class="font-weight-bold"> Sepatu </span>
+          <span class="font-weight-bold" style="color: #17a2b8;">
+            136RB+Produk
+          </span>
+        </div>
+        <img class="img" src="img/products/flash2.png" alt="" />
+      </div>
+    </div>
+    <div class="card-pencarian">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column">
+          <span class="font-weight-bold"> Sepatu </span>
+          <span class="font-weight-bold" style="color: #17a2b8;">
+            136RB+Produk
+          </span>
+        </div>
+        <img class="img" src="img/products/flash3.png" alt="" />
+      </div>
+    </div>
+    <div class="card-pencarian">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column">
+          <span class="font-weight-bold"> Sepatu </span>
+          <span class="font-weight-bold" style="color: #17a2b8;">
+            136RB+Produk
+          </span>
+        </div>
+        <img class="img" src="img/products/flash4.png" alt="" />
+      </div>
+    </div>
+    <div class="card-pencarian">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column">
+          <span class="font-weight-bold"> Sepatu </span>
+          <span class="font-weight-bold" style="color: #17a2b8;">
+            136RB+Produk
+          </span>
+        </div>
+        <img class="img" src="img/products/flash5.png" alt="" />
+      </div>
+    </div>
+  </div>
+  </div>
+  </section>
+
+<section id="product1" class="section-p1">
+  <div class="row mx-0 flex-column mt-4">
+    <nav style="background-color: #ffffff">
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <a
+          class="nav-link active"
+          id="nav-home-tab"
+          data-toggle="tab"
+          href="#nav-home"
+          role="tab"
+          aria-controls="nav-home"
+          aria-selected="true"
+          style="color: #f53d2d; border-right: none"
+        >
+          <h6>REKOMENDASI</h6>
+        </a>
+        <a
+          class="
+            nav-link
+            d-flex
+            justify-content-center
+            align-items-center
+          "
+          id="nav-profile-tab"
+          data-toggle="tab"
+          href="#nav-profile"
+          role="tab"
+          aria-controls="nav-profile"
+          aria-selected="false"
+          style="color: #f53d2d; border-right: none; width: 100px"
+        >
+          <img src="img/gratis.png" alt="" width="50" />
+        </a>
+      </div>
+    </nav>
+    <div class="tab-content mt-2" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+          <h2>Produk Sepatu</h2>
+          <p>Semua Koleksi Sepatu Kami Adalah Yang Terbaru Untuk Anda</p>
+          <div class="pro-container">
+          <div class="pro" onclick="window.location.href='sproduct.html';">
+            <img src="img/products/s1.jpg" alt="">
+            <div class="des">
+                <span>Vans</span>
+                <h5>Vans Old Skool Motif Thrasher Merah</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.175.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/s2.jpg" alt="">
+            <div class="des">
+                <span>Vans</span>
+                <h5>Sepatu Vans Slip on Hitam</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.175.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/s3.jpg" alt="">
+            <div class="des">
+                <span>Vans</span>
+                <h5>Vans Authentic Sneakers White</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.175.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/s4.jpg" alt="">
+            <div class="des">
+                <span>Vans</span>
+                <h5>Vans Sk8 Skate High Pro X Motif Flame On Fire Api</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.175.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/s5.jpg" alt="">
+            <div class="des">
+                <span>Vans</span>
+                <h5>Vans Slip On Checker Flame Shoes Merah Api</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.175.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/s6.jpg" alt="">
+            <div class="des">
+                <span>Vans</span>
+                <h5>Vans Old Skool Biru Navy</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.175.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/s7.jpg" alt="">
+            <div class="des">
+                <span>Vans</span>
+                <h5>Sepatu Vans Boots </h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.175.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/s8.jpg" alt="">
+            <div class="des">
+                <span>Converse</span>
+                <h5>Sepatu Converse Ct</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.175.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/s9.jpg" alt="">
+            <div class="des">
+                <span>Vans</span>
+                <h5>Sepatu Vans Slip On Catur</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.175.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/s10.jpg" alt="">
+            <div class="des">
+                <span>Vans</span>
+                <h5>Vans Slip On Maron</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.175.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/s11.jpg" alt="">
+            <div class="des">
+                <span>Vans</span>
+                <h5>Vans Slip On Black</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.175.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/s12.jpg" alt="">
+            <div class="des">
+                <span>Converse</span>
+                <h5>Sepatu Converse</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.175.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/s13.jpg" alt="">
+            <div class="des">
+                <span>Converse</span>
+                <h5>Sepatu Converse Putih</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.175.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/s14.jpg" alt="">
+            <div class="des">
+                <span>Vans</span>
+                <h5>Sepatu Vans Old Skool</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.175.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/s15.jpg" alt="">
+            <div class="des">
+                <span>Vans</span>
+                <h5>Sepatu Vans Authentic Grey</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.175.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/s16.jpg" alt="">
+            <div class="des">
+                <span>Converse</span>
+                <h5>Sepatu Converse Boots life's too short to waste</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.175.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/s17.jpg" alt="">
+            <div class="des">
+                <span>Converse</span>
+                <h5>Sepatu Converse Hitam</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.175.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/s18.jpg" alt="">
+            <div class="des">
+                <span>Vans</span>
+                <h5>Sepatu Vans Boots Catur</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.175.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+    </div>
+
+    <div class="rekomendasi">
+      <button
+        class="btn w-50"
+        style="
+          color: #888;
+          border: 1px solid #888;
+          background-color: #ffffff;
+        "
+      >
+        Lihat Lainnya
+      </button>
+    </div>
+  </div>
+  <div
+    class="tab-pane fade"
+    id="nav-profile"
+    role="tabpanel"
+    aria-labelledby="nav-profile-tab"
+  >
+
+  <h2>Produk Tas</h2>
+  <p>Semua Koleksi Tas Kami Adalah Yang Terbaru Untuk Anda</p>
+  <div class="pro-container">
+      <div class="pro">
+          <img src="img/products/t1.jpg" alt="">
+          <div class="des">
+              <span>Tas</span>
+              <h5>Tas impor made in china</h5>
+              <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              </div>
+              <h4>Rp.220.000</h4>
+          </div>
+          <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+          <img src="img/products/t2.jpg" alt="">
+          <div class="des">
+              <span>Tas</span>
+              <h5>Tas Charles Keith impor</h5>
+              <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              </div>
+              <h4>Rp.260.000</h4>
+          </div>
+          <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+          <img src="img/products/t3.jpg" alt="">
+          <div class="des">
+              <span>Tas</span>
+              <h5>Tas impor made in china</h5>
+              <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              </div>
+              <h4>Rp.290.000</h4>
+          </div>
+          <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+          <img src="img/products/t4.jpg" alt="">
+          <div class="des">
+              <span>Tas</span>
+              <h5>Tas impor made in china</h5>
+              <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              </div>
+              <h4>Rp.290.000</h4>
+          </div>
+          <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+          <img src="img/products/t5.jpg" alt="">
+          <div class="des">
+              <span>Tas</span>
+              <h5>Tas impor made in china</h5>
+              <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              </div>
+              <h4>Rp.220.000</h4>
+          </div>
+          <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+          <img src="img/products/t6.jpg" alt="">
+          <div class="des">
+              <span>Tas</span>
+              <h5>Tas impor Dior made in china</h5>
+              <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              </div>
+              <h4>Rp.280.000</h4>
+          </div>
+          <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+          <img src="img/products/t7.jpg" alt="">
+          <div class="des">
+              <span>Tas</span>
+              <h5>Tas impor made in china</h5>
+              <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              </div>
+              <h4>Rp.295.000</h4>
+          </div>
+          <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+          <img src="img/products/t8.jpg" alt="">
+          <div class="des">
+              <span>Tas</span>
+              <h5>Tas Impor Chibao</h5>
+              <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              </div>
+              <h4>Rp.240.000</h4>
+          </div>
+          <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+          <img src="img/products/t9.jpg" alt="">
+          <div class="des">
+              <span>Tas</span>
+              <h5>Tas LV Louis Vuitton coklat</h5>
+              <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              </div>
+              <h4>Rp.240.000</h4>
+          </div>
+          <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+          <img src="img/products/t10.jpg" alt="">
+          <div class="des">
+              <span>Tas</span>
+              <h5>Tas Moschino</h5>
+              <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              </div>
+              <h4>Rp.240.000</h4>
+          </div>
+          <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+          <img src="img/products/t11.jpg" alt="">
+          <div class="des">
+              <span>Tas</span>
+              <h5>Tas impor Gucci</h5>
+              <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              </div>
+              <h4>Rp.190.000</h4>
+          </div>
+          <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+          <img src="img/products/t12.jpg" alt="">
+          <div class="des">
+              <span>Tas</span>
+              <h5>Tas impor Ransel made in china</h5>
+              <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              </div>
+              <h4>Rp.240.000</h4>
+          </div>
+          <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+          <img src="img/products/t13.jpg" alt="">
+          <div class="des">
+              <span>Tas</span>
+              <h5>Tas LV Louis Vuitton</h5>
+              <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              </div>
+              <h4>Rp.240.000</h4>
+          </div>
+          <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+          <img src="img/products/t14.jpg" alt="">
+          <div class="des">
+              <span>Tas</span>
+              <h5>Tas Impor Chibao</h5>
+              <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              </div>
+              <h4>Rp.240.000</h4>
+          </div>
+          <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+          <img src="img/products/t15.jpg" alt="">
+          <div class="des">
+              <span>Tas</span>
+              <h5>Tas LV Louis Vuitton Catur coklat</h5>
+              <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              </div>
+              <h4>Rp.370.000</h4>
+          </div>
+          <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+          <img src="img/products/t16.jpg" alt="">
+          <div class="des">
+              <span>Tas</span>
+              <h5>Tas Pegang Jeep</h5>
+              <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              </div>
+              <h4>Rp.250.000</h4>
+          </div>
+          <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+  </div>
+
+   <div class="w-100 d-flex justify-content-center mt-4">
+      <button
+        class="btn w-50"
+        style="
+          color: #888;
+          border: 1px solid #888;
+          background-color: #ffffff;
+        "
+      >
+        Lihat Lainnya
+      </button>
+    </div>
+
+</section>
+
+<section id="banner" class="section-m1">
+<h4>Repair Services</h4>
+<h2>Up to <span>70% Off</span>  " All-t Shirts & Accessories "</h2>
+<button class="normal">Explore More</button>
+</section>
+
+<section id="product1" class="section-p1">
+    <h2>Produk Tas</h2>
+    <p>Semua Koleksi Tas Kami Adalah Yang Terbaru Untuk Anda</p>
+    <div class="pro-container">
+        <div class="pro">
+            <img src="img/products/t1.jpg" alt="">
+            <div class="des">
+                <span>Tas</span>
+                <h5>Tas impor made in china</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.220.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/t2.jpg" alt="">
+            <div class="des">
+                <span>Tas</span>
+                <h5>Tas Charles Keith impor</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.260.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/t3.jpg" alt="">
+            <div class="des">
+                <span>Tas</span>
+                <h5>Tas impor made in china</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.290.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/t4.jpg" alt="">
+            <div class="des">
+                <span>Tas</span>
+                <h5>Tas impor made in china</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.290.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/t5.jpg" alt="">
+            <div class="des">
+                <span>Tas</span>
+                <h5>Tas impor made in china</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.220.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/t6.jpg" alt="">
+            <div class="des">
+                <span>Tas</span>
+                <h5>Tas impor Dior made in china</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.280.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/t7.jpg" alt="">
+            <div class="des">
+                <span>Tas</span>
+                <h5>Tas impor made in china</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.295.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/t8.jpg" alt="">
+            <div class="des">
+                <span>Tas</span>
+                <h5>Tas Impor Chibao</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.240.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/t9.jpg" alt="">
+            <div class="des">
+                <span>Tas</span>
+                <h5>Tas LV Louis Vuitton coklat</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.240.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/t10.jpg" alt="">
+            <div class="des">
+                <span>Tas</span>
+                <h5>Tas Moschino</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.240.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/t11.jpg" alt="">
+            <div class="des">
+                <span>Tas</span>
+                <h5>Tas impor Gucci</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.190.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/t12.jpg" alt="">
+            <div class="des">
+                <span>Tas</span>
+                <h5>Tas impor Ransel made in china</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.240.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/t13.jpg" alt="">
+            <div class="des">
+                <span>Tas</span>
+                <h5>Tas LV Louis Vuitton</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.240.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/t14.jpg" alt="">
+            <div class="des">
+                <span>Tas</span>
+                <h5>Tas Impor Chibao</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.240.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/t15.jpg" alt="">
+            <div class="des">
+                <span>Tas</span>
+                <h5>Tas LV Louis Vuitton Catur coklat</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.370.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/t16.jpg" alt="">
+            <div class="des">
+                <span>Tas</span>
+                <h5>Tas Pegang Jeep</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.250.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+    </div>
+
+</section>
+
+<section id="sm-banner" class="section-p1">
+<div class="banner-box">
+<h4>crazy deals</h4>
+<h2>buy 1 get 1</h2>
+<span>The best classic dress is on sale at area</span>
+<button class="normal">Learn More</button>
+</div>
+<div class="banner-box banner-box2">
+    <h4>spring summer</h4>
+    <h2>upcoming season</h2>
+    <span>The best classic dress is on sale at area</span>
+    <button class="normal">Collection</button>
+    </div>
+</section>
+
+<section id="banner3">
+    <div class="banner-box">
+        <h2>SENSASINAL SALE</h2>
+        <h3>Winter Collection -50% OFF</h3>
+        </div>
+        <div class="banner-box banner-box2">
+        <h2>NEW FOOTWEAR COLLECTION</h2>
+        <h3>Spring / Summur 2022</h3>
+    </div>
+    <div class="banner-box banner-box3">
+        <h2>T-SHIRTS</h2>
+        <h3>New Trendy Prints</h3>
+        </div>
+</section>
+
+<section id="product1" class="section-p1">
+    <h2>Produk Sandal</h2>
+    <p>Semua Koleksi Sandal Kami Adalah Yang Terbaru Untuk Anda</p>
+    <div class="pro-container">
+        <div class="pro">
+            <img src="img/products/san1.jpg" alt="">
+            <div class="des">
+                <span>Sandal</span>
+                <h5>Sandal Karet Wanita</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.55.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/san2.jpg" alt="">
+            <div class="des">
+                <span>Sandal</span>
+                <h5>Sandal Karet Wanita</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.55.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/san4.jpg" alt="">
+            <div class="des">
+                <span>Sandal</span>
+                <h5>Sandal Karet Wanita Merek New Balance</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.55.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/san5.jpg" alt="">
+            <div class="des">
+                <span>Sandal</span>
+                <h5>Sandal Wanita Merek Jolin</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.55.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/san6.jpg" alt="">
+            <div class="des">
+                <span>Sandal</span>
+                <h5>Sandal Wedges Wanita Merek KSA</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.35.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+        <div class="pro">
+            <img src="img/products/san7.jpg" alt="">
+            <div class="des">
+                <span>Sandal</span>
+                <h5>Sandal Wanita Teplek Merek Jolin</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h4>Rp.35.000</h4>
+            </div>
+            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        </div>
+    </div>
+
+</section>
+
+<section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+    <h4>Sign Up For Newsletter</h4>
+    <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+    <div class="form">
+        <input type="text" placeholder="Your Email Address">
+        <button class="normal">Sign Up</button>
+    </div>
+    </div>
+
+</section>
+
+<!-- produk terlaris -->
+
+<section id="container-2" class="section-p1">
+  <div class="pro-container style="background-color: #ffffff">
+    <div class="d-flex flex-column w-100 pt-4 pb-2">
+    <div class="d-flex justify-content-between w-100 px-4 pb-2">
+      <h4 style="color: #17a2b8;">PRODUK TERLARIS</h4>
+      <div class="d-flex align-items-center" style="color: #17a2b8;">
+        <span> Lihat Semua </span>
+        <span class="h4 mb-0 ml-2">></span>
+      </div>
+
+    </div>
+    <!-- carousel -->
+    <div
+      id="carouselExampleControls3"
+      class="carousel slide"
+      data-ride="carousel"
+      style="height: 300px"
+    >
+      <div class="carousel-inner h-100">
+        <div class="carousel-item h-100 active">
+          <div
+            class="row h-100 mx-0"
+            style="border-top: 2px solid #f2f2f2"
+          >
+            <div
+              class="col-4 h-100 pt-4"
+              style="border-right: 2px solid #f2f2f2"
+            >
+              <div class="d-flex w-100" style="height: 87%">
+                <div
+                  class="h-100 mr-2"
+                  style="width: 60%; background-color: yellow"
+                >
+                  <img class="w-100 h-100" src="img/products/s1.jpg" alt="" />
+                </div>
+                <div class="h-100" style="width: 40%">
+                  <div class="" style="height: 48%">
+                    <img
+                      class="w-100 h-100"
+                      src="img/products/s1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="mt-2" style="height: 48%">
+                    <img
+                      class="w-100 h-100"
+                      src="img/products/s1.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <span
+                class="position-relative h5"
+                style="color: #888; top: 10px"
+                >Masker Kain Karakter</span
+              >
+            </div>
+            <div
+              class="col-4 h-100 pt-4"
+              style="border-right: 2px solid #f2f2f2"
+            >
+              <div class="d-flex w-100" style="height: 87%">
+                <div
+                  class="h-100 mr-2"
+                  style="width: 60%; background-color: yellow"
+                >
+                  <img class="w-100 h-100" src="img/products/s1.jpg" alt="" />
+                </div>
+                <div class="h-100" style="width: 40%">
+                  <div class="" style="height: 48%">
+                    <img
+                      class="w-100 h-100"
+                      src="img/products/s1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="mt-2" style="height: 48%">
+                    <img
+                      class="w-100 h-100"
+                      src="img/products/s1.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <span
+                class="position-relative h5"
+                style="color: #888; top: 10px"
+                >Masker Kain Karakter</span
+              >
+            </div>
+            <div
+              class="col-4 h-100 pt-4"
+              style="border-right: 2px solid #f2f2f2"
+            >
+              <div class="d-flex w-100" style="height: 87%">
+                <div
+                  class="h-100 mr-2"
+                  style="width: 60%; background-color: yellow"
+                >
+                  <img class="w-100 h-100" src="img/products/s1.jpg" alt="" />
+                </div>
+                <div class="h-100" style="width: 40%">
+                  <div class="" style="height: 48%">
+                    <img
+                      class="w-100 h-100"
+                      src="img/products/s1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="mt-2" style="height: 48%">
+                    <img
+                      class="w-100 h-100"
+                      src="img/products/s1.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <span
+                class="position-relative h5"
+                style="color: #888; top: 10px"
+                >Masker Kain Karakter</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item h-100">
+          <div
+            class="row h-100 mx-0"
+            style="border-top: 2px solid #f2f2f2"
+          >
+            <div
+              class="col-4 h-100 pt-4"
+              style="border-right: 2px solid #f2f2f2"
+            >
+              <div class="d-flex w-100" style="height: 87%">
+                <div
+                  class="h-100 mr-2"
+                  style="width: 60%; background-color: yellow"
+                >
+                  <img class="w-100 h-100" src="img/products/s1.jpg" alt="" />
+                </div>
+                <div class="h-100" style="width: 40%">
+                  <div class="" style="height: 48%">
+                    <img
+                      class="w-100 h-100"
+                      src="img/products/s1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="mt-2" style="height: 48%">
+                    <img
+                      class="w-100 h-100"
+                      src="img/products/s1.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <span
+                class="position-relative h5"
+                style="color: #888; top: 10px"
+                >Masker Kain Karakter</span
+              >
+            </div>
+            <div
+              class="col-4 h-100 pt-4"
+              style="border-right: 2px solid #f2f2f2"
+            >
+              <div class="d-flex w-100" style="height: 87%">
+                <div
+                  class="h-100 mr-2"
+                  style="width: 60%; background-color: yellow"
+                >
+                  <img class="w-100 h-100" src="img/products/s1.jpg" alt="" />
+                </div>
+                <div class="h-100" style="width: 40%">
+                  <div class="" style="height: 48%">
+                    <img
+                      class="w-100 h-100"
+                      src="img/products/s1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="mt-2" style="height: 48%">
+                    <img
+                      class="w-100 h-100"
+                      src="img/products/s1.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <span
+                class="position-relative h5"
+                style="color: #888; top: 10px"
+                >Masker Kain Karakter</span
+              >
+            </div>
+            <div
+              class="col-4 h-100 pt-4"
+              style="border-right: 2px solid #f2f2f2"
+            >
+              <div class="d-flex w-100" style="height: 87%">
+                <div
+                  class="h-100 mr-2"
+                  style="width: 60%; background-color: yellow"
+                >
+                  <img class="w-100 h-100" src="img/products/s1.jpg" alt="" />
+                </div>
+                <div class="h-100" style="width: 40%">
+                  <div class="" style="height: 48%">
+                    <img
+                      class="w-100 h-100"
+                      src="img/products/s1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="mt-2" style="height: 48%">
+                    <img
+                      class="w-100 h-100"
+                      src="img/products/s1.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <span
+                class="position-relative h5"
+                style="color: #888; top: 10px"
+                >Masker Kain Karakter</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleControls3"
+        role="button"
+        data-slide="prev"
+      >
+        <img
+          src="assets/222.png"
+          alt=""
+          style="width: 50px; left: -90px; position: relative"
+        />
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleControls3"
+        role="button"
+        data-slide="next"
+      >
+        <img src="assets/333.png" alt=""style="width: 50px; right: -90px; position: relative"/>
+      </a>
+    </div>
+    </div>
+    </div>
+    </section>
+
+<section id="feature" class="section-p1">
+  <div class="fe-box">
+  <img src="img/features/f1.png" alt="">
+  <h6>Belanja Online</h6>
+</div>
+  <div class="fe-box">
+  <img src="img/features/f2.png" alt="">
+  <h6>Gratis Ongkir</h6>
+</div>
+<div class="fe-box">
+  <img src="img/features/f7.png" alt="">
+  <h6>Diskon</h6>
+</div>
+<div class="fe-box">
+  <img src="img/features/f4.png" alt="">
+  <h6>Antar Alamat</h6>
+</div>
+<div class="fe-box">
+  <img src="img/features/f5.png" alt="">
+  <h6>Garansi Uang Kembali</h6>
+</div>
+<div class="fe-box">
+  <img src="img/features/f6.png" alt="">
+  <h6>24/7 Support</h6>
+</div>
+</section>
+
+<!-- rekomendasi -->
+
+<div class="row mx-0 flex-column mt-4">
+  <nav style="background-color: #ffffff">
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a
+        class="nav-link active"
+        id="nav-home-tab"
+        data-toggle="tab"
+        href="#nav-home"
+        role="tab"
+        aria-controls="nav-home"
+        aria-selected="true"
+        style="color: #f53d2d; border-right: none"
+      >
+        <h6>REKOMENDASI</h6>
+      </a>
+      <a
+        class="
+          nav-link
+          d-flex
+          justify-content-center
+          align-items-center
+        "
+        id="nav-profile-tab"
+        data-toggle="tab"
+        href="#nav-profile"
+        role="tab"
+        aria-controls="nav-profile"
+        aria-selected="false"
+        style="color: #f53d2d; border-right: none; width: 100px"
+      >
+        <img src="assets/gratis.png" alt="" width="50" />
+      </a>
+    </div>
+  </nav>
+  <div class="tab-content mt-2" id="nav-tabContent">
+    <div
+      class="tab-pane fade show active"
+      id="nav-home"
+      role="tabpanel"
+      aria-labelledby="nav-home-tab"
+    >
+      <div class="row mx-0 mt-2" style="height: 200px">
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mx-0 mt-2" style="height: 200px">
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-100 d-flex justify-content-center mt-4">
+        <button
+          class="btn w-50"
+          style="
+            color: #888;
+            border: 1px solid #888;
+            background-color: #ffffff;
+          "
+        >
+          Lihat Lainnya
+        </button>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="nav-profile"
+      role="tabpanel"
+      aria-labelledby="nav-profile-tab"
+    >
+      <div class="row mx-0 mt-2" style="height: 200px">
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mx-0 mt-2" style="height: 200px">
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2 pl-0">
+          <div
+            class="d-flex flex-column h-100"
+            style="background-color: #ffffff"
+          >
+            <div
+              class="w-100 h-75 position-relative"
+              style="background-color: #f53d2d"
+            >
+              <img
+                class="w-100 h-100 position-absolute"
+                src="assets/products/f1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-100 d-flex flex-column px-2">
+              <span>Total Bag Alice Mini</span>
+              <div
+                class="
+                  w-100
+                  pb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  mt-2
+                "
+              >
+                <span style="color: #f53d2d; font-size: 14px"
+                  >Rp 4.900</span
+                >
+                <span style="color: #888; font-size: 12px"
+                  >10+ Terjual</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-100 d-flex justify-content-center mt-4">
+        <button
+          class="btn w-50"
+          style="
+            color: #888;
+            border: 1px solid #888;
+            background-color: #ffffff;
+          "
+        >
+          Lihat Lainnya
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<footer class="section-p1">
+<div class="col">
+    <img class="logo" src="img/molla.png" alt="">
+    <h4>contact</h4>
+    <p><strong>Alamat:</strong>Jl. Padang Sidempuan 499-521,</br> Aek Parombunan, Sibolga Sel., Kota Sibolga,</br>22524, Kota Sibolga, Sumatera Utara</p>
+    <p><strong>No HP:</strong>0813-2833-6117</p>
+    <p><strong>Jam Buka:</strong>07:00 Wib - 18:00 Wib</p>
+    <div class="follow">
+        <h4>Follow Us</h4>
+        <div class="icon">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-whatsapp"></i>
+        <i class="fab fa-youtube"></i>
+        </div>
+    </div>
+</div>
+
+<div class="col">
+    <h4>About</h4>
+    <a href="">About us</a>
+    <a href="">Delivery Information</a>
+    <a href="">Privacy Policy</a>
+    <a href="">Terms & Condition</a>
+    <a href="">Contact us</a>
+</div>
+
+<div class="col">
+    <h4>My Account</h4>
+    <a href="login.html">Login</a>
+    <a href="">View Cart</a>
+    <a href="">My Wishlist</a>
+    <a href="">Track My Order</a>
+    <a href="">Help</a>
+</div>
+
+<div class="col install">
+    <h4>Install App</h4>
+    <p>From App Store or Google Play</p>
+    <div class="row">
+        <img src="img/pay/app.jpg" alt="">
+        <img src="img/pay/play.jpg" alt="">
+    </div>
+    <p>Secured Payment Gateways</p>
+        <img src="img/pay/pay.png" alt="">
+</div>
+<div class="copyright">
+    <p>© 2022 Molla Store. All right reserved</br>Design By:Dafid Palevi</p>
+</div>
+</footer>
+<script src="script.js"></script>
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>
