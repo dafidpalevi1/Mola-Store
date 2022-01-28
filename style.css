@@ -1527,7 +1527,14 @@ footer .copyright {
 /* Single Product End */
 
 .nav-tabs {
+  border-top: 2px solid #dee2e6;
   border-bottom: 2px solid #dee2e6;
+  padding: 20px 0;
+}
+
+/* rekomendasi */
+.nav-link.active {
+  border-bottom: 3px solid #7a2df5 !important;
 }
 
 /* carousel */
