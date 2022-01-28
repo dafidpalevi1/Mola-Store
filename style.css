@@ -1866,7 +1866,7 @@ footer .copyright {
     background-color: rgb(0, 0, 0);
     color: #fff;
     font-weight: bold;
-    padding: 6px 10px;
+    padding: 6px 0;
   }
   
   .sale .diskon span {
@@ -2165,12 +2165,12 @@ footer .copyright {
     margin:0;padding:10px;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
-    width:150px;
+    width:100%;
     justify-self:center;
   }
   
   #product1 .pro {
-    width: 23%;
+    width: 100%;
     min-width: 180px;
     border: 1px solid #cce7d0;
     border-radius: 25px;
