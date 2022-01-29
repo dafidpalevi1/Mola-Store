@@ -184,7 +184,7 @@ body {
 
 /* Home Page */
 #hero{
-  background-image: url('img/hero4.png');
+  background-image: url(img/hero4.png);
   height: 90vh;
   width: 100%;
   background-size: cover;
@@ -2018,7 +2018,8 @@ footer .copyright {
 /* Start Media Query 477*/
 @media (max-width: 477px) {
   .section-p1 {
-    padding: 0 20px;
+    width: 100%;
+    padding: 0;
   }
   
   .section-m1 {
