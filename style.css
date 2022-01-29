@@ -1774,7 +1774,7 @@ footer .copyright {
 
     #hero{
       height: 78vh;
-      padding: 0;
+      padding: 0 40px;
       background-position: top 30% right 30%;
     }
 
