@@ -2123,6 +2123,7 @@ footer .copyright {
 /* Start Media Query 477*/
 @media (max-width: 477px) {
   .section-p1 {
+    width: 100%;
     padding: 0;
   }
   
@@ -2454,6 +2455,10 @@ footer .copyright {
   #subtotal{
     width: 100%;
     padding: 20px;
+  }
+
+  .bg-info{
+    width: 85%;
   }
   
 }
