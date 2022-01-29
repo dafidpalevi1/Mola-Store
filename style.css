@@ -2530,14 +2530,14 @@ footer .copyright {
 
 .account-form form .box {
   width: 100%;
-  padding: 1.2rem 1.4rem;
+  padding: 0;
   border: 0.1rem solid #0eb582;
   font-size: 16px;
   margin: .7rem 0;
 }
 
 .account-form form .flex {
-  padding: 1rem 0;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
