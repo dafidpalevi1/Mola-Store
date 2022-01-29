@@ -321,8 +321,8 @@ body {
 
 #hero button{
   display: inline-block;
-  background-color: rgb(148, 148, 148);
-  color: rgb(13, 17, 233);
+  background-color: #17a2b8;
+  color: rgb(255, 255, 255);
   padding: 1rem 1.5rem;
   border-radius: .5rem;
   font-weight: var(--font-semi-bold);
@@ -330,7 +330,7 @@ body {
 }
   
 #hero button:hover{
-  background-color: var(--first-color-alt);
+  background-color: #17a2b8;
 }
   
 #herobutton-link{
