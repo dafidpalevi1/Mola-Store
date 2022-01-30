@@ -1423,6 +1423,10 @@ footer .copyright {
   padding: 10px;
   background-color: #ffffff;
 }
+
+.jenis-sale h2{
+  text-align: center;
+}
   
 .jenis-sale p {
   font-size: 12px;
@@ -1439,6 +1443,37 @@ footer .copyright {
 }
   
 .wrap-img img {
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  min-width: 52px;
+}
+
+.jenis-sale-2 {
+  overflow: auto;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.jenis-sale-2 h2{
+  text-align: center;
+}
+  
+.jenis-sale-2 p {
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.wrap-img2-2 {
+  border-radius: 12px;
+  width: 45px;
+  height: 45px;
+  position: relative;
+  padding: 5px;
+}
+  
+.wrap-img-2 img {
   width: 45px;
   height: 45px;
   text-align: center;
