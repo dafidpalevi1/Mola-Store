@@ -17,6 +17,7 @@ h1 {
 }
 
 h2 {
+  align-items: center;
   font-size: 46px;
   line-height: 54px;
   color: #17a2b8;
@@ -1255,6 +1256,7 @@ footer .copyright {
   overflow: auto;
   background-color: #ffffff;
   /* padding: 13px; */
+  display: flex;
   flex-direction: column;
   padding-bottom: 20px;
 }
@@ -1392,6 +1394,7 @@ footer .copyright {
   font-size: 12px;
   color: rgb(0, 0, 0);
   text-align: center;
+  margin: 10px 25px 10px 5px;
 }
 
 .wrap-img2 {
@@ -1403,8 +1406,11 @@ footer .copyright {
 }
   
 .wrap-img img {
+  margin: 10px 25px 10px 5px;
   width: 45px;
   height: 45px;
+  text-align: center;
+  min-width: 52px;
 }
 
 /* jenis sale end */
