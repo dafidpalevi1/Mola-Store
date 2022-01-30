@@ -1289,9 +1289,9 @@ footer .copyright {
 .sale {
   overflow: auto;
   background-color: #ffffff;
-  /* padding: 13px; */
   display: flex;
   flex-direction: column;
+  padding-top: 0;
   padding-bottom: 20px;
 }
 .sale h5 {
