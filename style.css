@@ -459,6 +459,58 @@ body {
   background-position:center;
 }
 
+#banner-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image:url('https://cf.shopee.co.id/file/686e5ddc6d9398107abff5be0454da9f') ;
+  width: 100%;
+  height: 360px;
+  background-size: cover;
+  background-position:center;
+}
+
+#banner-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image:url('https://cf.shopee.co.id/file/fbf3f86ccc19b9820d1554cc4051a1eb') ;
+  width: 100%;
+  height: 360px;
+  background-size: cover;
+  background-position:center;
+}
+
+#banner-5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image:url('https://cf.shopee.co.id/file/4ad1a5e3ee1751cde27790a91778ddd2') ;
+  width: 100%;
+  height: 360px;
+  background-size: cover;
+  background-position:center;
+}
+
+#banner-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image:url('https://cf.shopee.co.id/file/ef7edebbef0ee6b74f7c484859683aa7') ;
+  width: 100%;
+  height: 360px;
+  background-size: cover;
+  background-position:center;
+}
+
 #banner-2 h4 {
   color: #fff;
   font-size: 16px;
@@ -2433,6 +2485,13 @@ footer .copyright {
     height: 94px;
     text-align: center;
     justify-content: space-around;
+  }
+
+  #banner-3 {
+    flex-grow: 100;
+    height: 90px;
+    background-image:url('https://cf.shopee.co.id/file/f046913255e421825c65f50d56aebbd6') ;
+    
   }
   
 }
