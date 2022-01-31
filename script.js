@@ -14,30 +14,17 @@ if (close) {
     })
 }
 
-/*login */
-let registerBtn = document.querySelector('.account-form .register-btn');
-let loginBtn = document.querySelector('.account-form .login-btn');
+let loadMoreBtn = document.querySelector('#load-more');
+let currentItem = 3;
 
-registerBtn.onclick = () =>{
-  registerBtn.classList.add('active');
-  loginBtn.classList.remove('active');
-  document.querySelector('.account-form .login-form').classList.remove('active');
-  document.querySelector('.account-form .register-form').classList.add('active');
-};
+loadMoreBtn.onclick = () =>{
+   let boxes = [...document.querySelectorAll('.pro-container .pro .des')];
+   for (var i = currentItem; i < currentItem + 5; i++){
+      boxes[i].style.display = 'inline-block';
+   }
+   currentItem += 5;
 
-loginBtn.onclick = () =>{
-  registerBtn.classList.remove('active');
-  loginBtn.classList.add('active');
-  document.querySelector('.account-form .login-form').classList.add('active');
-  document.querySelector('.account-form .register-form').classList.remove('active');
-};
-
-let accountForm = document.querySelector('.account-form')
-
-document.querySelector('#account-btn').onclick = () =>{
-  accountForm.classList.add('active');
+   if(currentItem >= boxes.length){
+      loadMoreBtn.style.display = 'none';
+   }
 }
-
-document.querySelector('#close-form').onclick = () =>{
-  accountForm.classList.remove('active');
-};
