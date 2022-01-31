@@ -42,11 +42,11 @@ p {
 /*section*/
 
 .section-p1 {
-  padding: 0 40px;
+  padding: 0 10px 10px;
 }
 
 .section-m1 {
-  margin: 10px 10px;
+  margin: 0;
 }
 
 button.normal {
@@ -97,10 +97,11 @@ body {
     outline: none;
     box-shadow: none;
     width: 100%;
+    height: 30px;
     font-size: 16px;
     font-weight: 600;
     margin-left: 10px;
-    padding: 0;
+    padding: 10px;
 }
 
 /* Header Start */
@@ -348,9 +349,9 @@ body {
   border: 1px solid #cce7d0;
   border-radius: 25px;
   cursor: pointer;
-  margin: 15px 0;
   transition:0.2s ease ;
   position: relative;
+  margin: 0 5px 10px;
 }
 
 #product1 .pro:hover{
@@ -1447,37 +1448,7 @@ footer .copyright {
   height: 45px;
   text-align: center;
   min-width: 52px;
-}
-
-.jenis-sale-2 {
-  overflow: auto;
-  padding: 10px;
-  background-color: #ffffff;
-}
-
-.jenis-sale-2 h2{
-  text-align: center;
-}
-  
-.jenis-sale-2 p {
-  font-size: 12px;
-  color: rgb(0, 0, 0);
-  text-align: center;
-}
-
-.wrap-img2-2 {
-  border-radius: 12px;
-  width: 45px;
-  height: 45px;
-  position: relative;
-  padding: 5px;
-}
-  
-.wrap-img-2 img {
-  width: 45px;
-  height: 45px;
-  text-align: center;
-  min-width: 52px;
+  justify-content: space-around;
 }
 
 /* jenis sale end */
