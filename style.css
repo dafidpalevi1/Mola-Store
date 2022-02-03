@@ -2486,6 +2486,15 @@ footer .copyright {
     text-align: center;
     justify-content: space-around;
   }
+
+  #banner-2 {
+    flex-grow: 100;
+    height: 90px;
+    background-image:url('https://cf.shopee.co.id/file/9a9bb86efc72cdfa4558b5fd70432bd1') ;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+  }
   
 
   #banner-3 {
