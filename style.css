@@ -1890,6 +1890,7 @@ footer .copyright {
   .sale .diskon span {
     background-color: transparent;
   }
+  
 
   .diskon {
     display: flex;
@@ -2485,6 +2486,8 @@ footer .copyright {
     height: 94px;
     text-align: center;
     justify-content: space-around;
+    padding-right: 20px;
+    padding-left: 0;
   }
 
   #banner-2 {
@@ -2531,6 +2534,14 @@ footer .copyright {
     margin-top: 20px;
     margin-bottom: 20px;
     
+  }
+
+  .menu-bar {
+    display: flex;
+    width: 100%;
+    overflow: auto;
+    margin-left: 0;
+    margin-right: 0;
   }
   
 }
