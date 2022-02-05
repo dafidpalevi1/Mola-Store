@@ -18,7 +18,7 @@ let loadMoreBtn = document.querySelector('#load-more');
 let currentItem = 3;
 
 loadMoreBtn.onclick = () =>{
-   let boxes = [...document.querySelectorAll('.pro-container .pro .des')];
+   let boxes = [...document.querySelectorAll('.product1 .pro .des')];
    for (var i = currentItem; i < currentItem + 5; i++){
       boxes[i].style.display = 'inline-block';
    }
