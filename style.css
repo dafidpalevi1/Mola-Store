@@ -1550,17 +1550,15 @@ footer .copyright {
 /* Single Product End */
 
 .nav-tabs {
-  border-top: 2px solid #dee2e6;
-  border-bottom: 2px solid #dee2e6;
-  padding: 20px 0;
+  border-top: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+  padding: 10px 0;
 }
 
 /* rekomendasi */
 .nav-link.active {
   border-bottom: 3px solid #17a2b8 !important;
 }
-
-
 
 /* carousel */
 .content {
@@ -2181,6 +2179,7 @@ footer .copyright {
 
   #product1 {
     text-align: center;
+    margin: 0 25px;
   }
   
   #product1 .pro-container {
@@ -2543,10 +2542,10 @@ footer .copyright {
 
   .menu-bar {
     display: flex;
+    flex-direction: row;
     width: 100%;
     overflow: auto;
-    margin-left: 0;
-    margin-right: 0;
+    padding: 0 20px 0 20px;
   }
   
 }
