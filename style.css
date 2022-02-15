@@ -632,6 +632,7 @@ body {
   background-repeat: no-repeat;
   background-position: 20% 30%;
   background-color: #041c42;
+  height: 200px;
 }
 
 #newsletter h4{
@@ -2545,7 +2546,7 @@ footer .copyright {
     flex-direction: row;
     width: 100%;
     overflow: auto;
-    padding: 0 20px 0 20px;
+    padding: 0 10px 0 10px;
   }
   
 }
