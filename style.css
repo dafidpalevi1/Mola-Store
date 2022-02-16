@@ -2627,9 +2627,9 @@ footer .copyright {
 .wrap-carousel {
   height: 90px;
   width: 585px;
-  position: relative;
+  display: grid;
   top: 30px;
-  z-index: 2;
+  margin-bottom: 50px;
 }
 
 .carousel-indicators li {
@@ -2670,7 +2670,8 @@ footer .copyright {
 }
 
 .col-8{
-  display: contents;
+  position: relative;
+  display: grid;
 }
 
 .mt-4{
