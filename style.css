@@ -2669,6 +2669,10 @@ footer .copyright {
   position: relative;
 }
 
+.col-8{
+  display: contents;
+}
+
 .mt-4{
   padding-left: 0;
   padding-right: 0;
