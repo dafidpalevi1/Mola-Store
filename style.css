@@ -42,7 +42,7 @@ p {
 /*section*/
 
 .section-p1 {
-  padding: 0 10px 10px;
+  padding: 0 0 10px;
 }
 
 .section-p2 {
@@ -462,6 +462,26 @@ body {
   width: 100%;
   height: 100%;
   justify-content: center;
+}
+
+.row-10{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+}
+
+.row-10 .span{
+  color: #f53d2d;
+}
+
+.row-10 .img{
+  width: 50px;
+  height: 150px;
+  margin: 0;
+  padding: 0;
 }
 
 /*banner start*/
@@ -2230,7 +2250,7 @@ footer .copyright {
 
   #product1 {
     text-align: center;
-    margin: 0 25px;
+    margin: 0;
   }
   
   #product1 .pro-container {
@@ -2674,7 +2694,7 @@ footer .copyright {
 .container-5{
   display: grid;
   width: auto;
-  height: 150px;
+  height: 90px;
   overflow: auto;
   overflow-y: hidden;
   margin: 0;
@@ -2712,6 +2732,23 @@ footer .copyright {
 .container-7 .img{
   width: 100px;
   height: 100px;
+}
+
+.row-10{
+  display: grid;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.row-10 .span{
+  color: #f53d2d;
+}
+
+.row-10 .img{
+  width: 50px;
+  height: 67%;
+  margin: 0;
 }
 
 .pl5{
