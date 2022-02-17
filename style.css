@@ -457,6 +457,13 @@ body {
   height: 10px;
 }
 
+.container-5{
+  display: grid;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
 /*banner start*/
 
 #banner {
@@ -2653,27 +2660,8 @@ footer .copyright {
   display: none;
 }
 
-.mb-0,
-.ml-2{
-  font-size: 10px;
-  flex-direction: column;
-}
-
-.mr-4{
-  font-size: 10px;
-}
-
 .h-100{
   width: 100%;
-}
-
-.col-3{
-  width: 20px;
-  height: 250px;
-  font-size: 10px;
-  display: grid;
-  margin-bottom: 10px;
-  padding-bottom: 0;
 }
 
 .col-4{
@@ -2685,10 +2673,49 @@ footer .copyright {
 .container-5{
   display: grid;
   width: auto;
-  height: 100px;
+  height: 150px;
   overflow: auto;
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
 }
 
+.container-6,
+.span,
+.h4{
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 3px 0 0;
+  font-size: 10px;
+  margin: 0 0 0 0;
+  color: #000000;
+  overflow: auto;
+  overflow-y: hidden;
+}
+
+.container-6 .img{
+  width: 6px;
+  height: 5px;
+  padding: 5px;
+}
+
+.container-7{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 600px;
+  background-color: #ffffff;
+}
+
+.container-7 .img{
+  width: 100px;
+  height: 100px;
+}
+
+.pl5{
+  justify-content: flex-start
+}
 
 .mt-ku{
   padding-left: 0;
