@@ -42,7 +42,7 @@ p {
 /*section*/
 
 .section-p1 {
-  padding: 0 10px 10px;
+  padding: 0 30px 30px;
 }
 
 .section-p2 {
@@ -1432,7 +1432,7 @@ footer .copyright {
   position: absolute;
   right: 0;
   top: 0;
-  background-color: #17a2b8;
+  background-color: #f82121;
   width: 60px;
   height: 60px;
 }
