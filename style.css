@@ -2734,20 +2734,19 @@ footer .copyright {
   height: 100px;
 }
 
-.row-10{
-  display: grid;
+.col-8{
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  margin: 0;
-  padding: 0;
 }
 
-.row-10 .span{
+.col-8 .span{
   color: #f53d2d;
 }
 
-.row-10 .img{
+.col-8 .img{
   width: 50px;
-  height: 67%;
+  height: 100%;
   margin: 0;
 }
 
