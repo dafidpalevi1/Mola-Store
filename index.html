@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="icon" type="image/x-icon" href="img/fav.png">
 </head>
 <body>
@@ -319,11 +320,7 @@
 </section>
 
 <!-- flash sale -->
-<div class="d-flex px-4 pt-4">
-  <h5 style="color: #17a2b8; font-size: 22px; margin: 10px; padding: 10px 10px 0;" class="mr-5">FLASH SALE</h5>
-  <span style="font-size: 22px; background-color: black; color: white; margin: 13px 0; padding: 0;">24</span>
-  <span style="font-size: 22px; background-color: black; color: white; margin: 13px 0; padding: 0;" class= "ml-3">00</span>
-  <span style="font-size: 22px; background-color: black; color: white; margin: 13px 0; padding: 0;" class="ml-3">00</span>
+<div style="color: #17a2b8; font-size: 22px; margin: 10px; padding: 10px 10px 0;" class="mr-5">Flash Sale <span id="flashsale"></span></div>
 </div>
 <section id="flash-sale" class="section-p1">
   <div class="row mx-0 sale mt-4">
@@ -485,25 +482,19 @@
 <!-- banner-baru -->
   <div class="container-5">
       <img class="container-5"
-        src="https://cf.shopee.co.id/file/626188cabdd5ffe7ddeb9f387cd71bf8"
+        src="img/bannerku.jpg"
         alt=""
         style="border-radius: 20px;"
       />
   </div>
+<!-- end banner-baru -->
    
 <!-- pencarian populer -->
-<div
-    class="px-4 d-flex justify-content-between align-items-center w-100"
-  >
+<section id="pencarian-populer" class="section-p1"></section>
+<div class="px-4 d-flex justify-content-between align-items-center w-100" >
     <h4 class="" style="color: #17a2b8; padding: 0 20px;">PENCARIAN POPULER</h4>
     <span style="color: #17a2b8; font-weight: 100">Ubah</span>
   </div>
-<section id="pencarian-populer" class="section-p1">
-  <div
-  class="row flex-column mx-0 pt-3 mt-4"
-  style="background-color: #ffffff"
-  >
-  
   <div class="d-flex w-100 pt-3">
     <div class="card-pencarian">
       <div class="d-flex align-items-center justify-content-center">
@@ -1522,18 +1513,7 @@
       </div>
   </div>
 
-   <div class="w-100 d-flex justify-content-center mt-4">
-      <button
-        class="btn w-50"
-        style="
-          color: rgb(255, 255, 255);
-          border: 1px solid #888;
-          background-color: #17a2b8;
-        "
-      >
-        Lihat Lainnya
-      </button>
-    </div>
+  <div id="load-more"> load more </div>
 
 </section>
 
@@ -2137,6 +2117,7 @@
 </div>
 </footer>
 <script src="script.js"></script>
+
 
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
