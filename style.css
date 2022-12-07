@@ -2764,6 +2764,18 @@ footer .copyright {
   display: grid;
 }
 
+.d-flex w-100 pt-3{
+  overflow: auto;
+  margin: auto;
+  padding: auto;
+}
+
+.pt-3 {
+  overflow: auto;
+  margin: auto;
+  padding: auto;
+}
+
 }
 
 /* Versi 477 Mobile End */
